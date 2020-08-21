@@ -10,17 +10,17 @@ _to be completed_
 
 ## Installation
 
-See the [installation instructions](https://github.com/abey79/vpype/blob/master/INSTALL.md) for information on how
-to install `vpype`.
+See the [vpype installation instructions](https://github.com/abey79/vpype/blob/master/INSTALL.md) for information on how
+to install `vpype`first.
 
 
 ### Existing `vpype` installation
 
 Use this method if you have an existing `vpype` installation (typically in an existing virtual environment) and you
-want to make this plug-in available. You must activate your virtual environment beforehand.
+want to make this plug-in available. You must activate your virtual environment (if applicable) beforehand.
 
 ```bash
-$ pip install git+https://github.com/abey79/hpglpype.git#egg=hpglpype
+$ pip install git+https://github.com/zxsq-cc/hpglpype.git#egg=hpglpype
 ```
 
 Check that your install is successful:
@@ -50,7 +50,7 @@ $ git clone https://github.com/abey79/hpglpype.git
 $ cd hpglpype
 ```
 
-Create a virtual environment:
+Create a virtual environment (optional):
 
 ```bash
 $ python3 -m venv venv
@@ -85,7 +85,7 @@ Commands:
 
 ## Documentation
 
-The complete plug-in documentation is available directly in the CLI help:
+[WIP] The complete plug-in documentation is available directly in the CLI help:
 
 ```bash
 $ vpype hpgl --help
