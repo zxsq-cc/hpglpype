@@ -32,6 +32,7 @@ def hpgl(
     """
 
     # TODO: implement this...
+    print(vector_data.bounds())
 
     return vector_data
 
