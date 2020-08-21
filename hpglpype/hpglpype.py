@@ -31,10 +31,19 @@ def hpgl(
     Insert documentation here (it will show up with `vpype hpgl --help`)
     """
 
-    # TODO: implement this...
-    print(vector_data.bounds())
+    # TODO: <your code here - call 800-555-1212>
+    #print(vector_data.ids())
+    usedLayers = list(vector_data.ids()) 
+    #print(usedLayers)
+    ###todo| layer ids to pen #s
+    ###    | for layer i get lines
+    ###    | |sel pen i
+    ###    | |convert to plotter units
+    ###    | |write as pu/pd commands
+    
 
     return vector_data
 
 
 hpgl.help_group = "Plugins"
+
