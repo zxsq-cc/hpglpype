@@ -103,7 +103,7 @@ def hpgl(
     
     def selPen(layer):
         #select pen via layer number
-        output.write("SP{};".format(layer))
+        output.write("PU;SP{};".format(layer))
         return(0)
     
     initFile()
