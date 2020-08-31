@@ -5,13 +5,13 @@
 
 ## Examples
 
-_to be completed_
+```$ vpype -read /path/to/file.svg hpgl /path/to/output/file.hpgl```
 
 
 ## Installation
 
 See the [vpype installation instructions](https://github.com/abey79/vpype/blob/master/INSTALL.md) for information on how
-to install `vpype`first.
+to install `vpype`first, then continue below.
 
 
 ### Existing `vpype` installation
@@ -46,7 +46,7 @@ Commands:
 Use this method if you need to edit this project. First, clone the project:
 
 ```bash
-$ git clone https://github.com/abey79/hpglpype.git
+$ git clone https://github.com/zxsq-cc/hpglpype.git
 $ cd hpglpype
 ```
 
