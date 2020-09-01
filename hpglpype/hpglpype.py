@@ -41,22 +41,22 @@ def hpgl(
     Pens are selected according to layer numbers, defaulting to pen 1.
     It was tested on an HP7475A, and may/may not misbehave on other models.
     ===command options===
-    -PS  | --paper-size        Specify loaded paper size from the following list
-        ================================
-        ||          US Sizes  (inches)||
-        ||A    US Letter      (8.5x11)||
-        ||B    US Tabloid      (11x17)||
-        ||L    US Legal       (8.5x14)||
-        ||X    US Executive(7.25x10.5)||
-        ||        Metric Sizes    (mm)||
-        ||A6   ISO A6        (105x148)||
-        ||A5   ISO A5        (148x210)||
-        ||A4   ISO A4        (210x297)||
-        ||A3   ISO A3        (297x420)||
-        ================================
     -OL  | --origin_location   use either [center] or [corner] based on what your plotter uses
     
     """
+    ##-PS  | --paper-size        Specify loaded paper size from the following list
+#        ================================
+#        ||          US Sizes  (inches)||
+#        ||A    US Letter      (8.5x11)||
+#        ||B    US Tabloid      (11x17)||
+#        ||L    US Legal       (8.5x14)||
+#        ||X    US Executive(7.25x10.5)||
+#        ||        Metric Sizes    (mm)||
+#        ||A6   ISO A6        (105x148)||
+#        ||A5   ISO A5        (148x210)||
+#        ||A4   ISO A4        (210x297)||
+#        ||A3   ISO A3        (297x420)||
+#        ================================
 
     # TODO: <your code here - call 800-555-1212>
     ####### Care about options eg plotter home, paper orientation
@@ -70,7 +70,7 @@ def hpgl(
            ##round(px val * 10.583333) = pu val
         PUConstant = 10.583333
         PUX = np.round(line.real * PUConstant)
-        PUY = np.round(line.imag * PUConstant)
+        PUY = np.round((page_format[1] - line.imag) * PUConstant)
         plot = np.zeros((line.size,), dtype=complex)
         plot.real = PUX
         plot.imag = PUY
@@ -105,6 +105,7 @@ def hpgl(
         #select pen via layer number
         output.write("PU;SP{};".format(layer))
         return(0)
+    
     
     initFile()
     for layer_id in sorted(vector_data.layers.keys()):
